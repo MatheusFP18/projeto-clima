@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima</title>
     <link rel="stylesheet" href="assests/style.css">
-    
+
 </head>
+
 <body>
-    <h1>Clima</h1>
+    <h1 id="titulo">Previsão do tempo</h1>
 
-    <form class="busca">
-        <input type="search" class="searchInput" placeholder="Digite o nome da cidade">
-        <button>Buscar</button>
-    </form>
+    <main class="container">
+        <div>
+            <form class="busca">
+                <input type="search" class="searchInput" placeholder="Digite o nome da cidade">
+                <button id="search-button">Buscar</button>
+            </form>
+        </div>
 
-    <div class="resultado">
-        <div class="titulo">---</div>
-
-        <div class="info">
-            <div class="temp">
-                <div class="tempTitulo">Temperatura</div>
-                <div class="tempInfo">--- <sup>ºC</sup></div>
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+        <div class="resultado">
+            <div class="nomeCidade">
+                <span id="cidade"></span>
+                <img id="pais" src="" alt="Bandeira do país">
             </div>
-            <div class="vento">
-                <div class="ventoTitulo">Vento</div>
-                <div class="ventoInfo">-- <span>km/h</span></div>
-                <div class="ventoArea">
-                    <div class="ventoPonto" stule="transform: rotate(0deg)"></div>
+
+            <div class="info">
+                <div class="temp">
+                    <div class="tempTitulo">Temperatura</div>
+                    <div class="tempInfo">--- <sup>ºC</sup></div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                </div>
+                <div class="vento">
+                    <div class="ventoTitulo">Vento</div>
+                    <div class="ventoInfo">-- <span>km/h</span></div>
+                    <div class="ventoArea">
+                        <div class="ventoPonto" style="transform: rotate(0deg)"></div>
+                    </div>
                 </div>
             </div>
+            <div class="previsaoTempo">
+                <h1>Previsão para as próximas horas:</h1>
+                <div id="containerPrevisao"></div>
+            </div>
         </div>
-    </div>
 
-    <div class="aviso"></div>
+        <div class="aviso"></div>
+    </main>
 
-    <footer>Criado pela B7Web e reproduzido por <a href="https://github.com/MatheusFP18">Matheus</a></footer>
+    <footer>Projeto criado por <a href="https://github.com/MatheusFP18">Matheus</a></footer>
 
     <script src="assests/script.js"></script>
 </body>
+
 </html>
